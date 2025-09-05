@@ -1,16 +1,18 @@
-# flutter_application_1
+# AlgoHive
 
-A new Flutter project.
+<p align="center">
+  <img src="assets/logo2.png" alt="AlgoHive Logo" width="200"/>
+</p>
 
-## Getting Started
+## 📝 About AlgoHive
+**AlgoHive** is an AI-powered **note-taking app** integrated with **Google Gemini**.  
+It helps you capture ideas, organize thoughts, and generate insights with the power of AI.  
 
-This project is a starting point for a Flutter application.
+### 🚀 Key Features
+- ✨ **AI-Powered Notes** → Summarize, rewrite, and enhance your notes instantly.  
+- 🔍 **Smart Search** → Find information quickly using AI-driven context search.  
+- 📂 **Organized Workspace** → Keep your notes structured and accessible.  
+- 🤖 **Gemini Integration** → Leverage Google Gemini for advanced text generation and idea exploration.  
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🎯 Why AlgoHive?
+In a world full of information, **AlgoHive** acts as your intelligent hub — making note-taking smarter, faster, and more collaborative.  
