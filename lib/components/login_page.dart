@@ -68,8 +68,13 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Logo / brand
-                const Icon(Icons.lock_outline, size: 80, color: Colors.white),
-                const SizedBox(height: 16),
+                Image.asset(
+                  'assets/images/logo1.png',
+                  height: 210,
+                  width: 250,
+                  fit: BoxFit.contain, // You can adjust this value
+                ),
+                const SizedBox(height: 4),
                 const Text(
                   'Welcome Back',
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
@@ -86,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.white.withOpacity(0.05),
+                        color: Colors.black38.withOpacity(0.05),
                         blurRadius: 14,
                         spreadRadius: 2,
                         offset: const Offset(0, 6),
