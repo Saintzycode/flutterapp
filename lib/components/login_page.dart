@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'user_repository.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -29,29 +31,28 @@ class _LoginPageState extends State<LoginPage> {
 
   // 3) Submit logic (simulate authentication)
   Future<void> _submit() async {
-    if (!_formKey.currentState!.validate()) return;
+  if (!_formKey.currentState!.validate()) return;
 
-    setState(() => _isLoading = true);
-    await Future.delayed(const Duration(milliseconds: 900));
+  setState(() => _isLoading = true);
+  await Future.delayed(const Duration(milliseconds: 900));
 
-    final username = _usernameController.text.trim();
-    final password = _passwordController.text;
+  final username = _usernameController.text.trim();
+  final password = _passwordController.text;
 
-    const goodUser = 'admin';
-    const goodPass = '1234';
-
-    if (username == goodUser && password == goodPass) {
-      if (!mounted) return;
-      Navigator.pushReplacementNamed(context, '/home');
-    } else {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Invalid username or password')),
-      );
-    }
-
-    if (mounted) setState(() => _isLoading = false);
+  final ok = UserRepository.validateUser(username, password);
+  if (ok) {
+    if (!mounted) return;
+    Navigator.pushReplacementNamed(context, '/home');
+  } else {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Invalid username or password')),
+    );
   }
+
+  if (mounted) setState(() => _isLoading = false);
+}
+
 
   @override
   Widget build(BuildContext context) {
