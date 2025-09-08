@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/home_page.dart';
 import 'package:flutter_application_1/components/login_page.dart';
-import  'components/register_page.dart';
+import 'package:flutter_application_1/components/user_repository.dart';
+import 'components/register_page.dart';
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await UserRepository.init();
   runApp(const MyApp());
 }
 
